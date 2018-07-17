@@ -1,0 +1,32 @@
+This dataset contains resting state data collected using a multiband, multiecho simultaneous pseudocontinous ASL (pCASL) and BOLD acquisition. Additional information regarding the sequence is as follows:
+
+The sequence consists of an unbalanced pseudo-continuous ASL (pCASL) tagging module, followed by a post labeling delay period (PLD). Following the PLD, a multiband excitation and multi-echo, gradient-echo EPI readout was implemented. Blipped-CAIPI was also applied to reduce g-factor noise amplification caused by the slice-unaliasing in MB imaging. Each echo in the multi-echo acquisition was obtained consecutively as part of one shot. The last repetition is the M0 image collected for quantification of CBF.
+Each subject underwent one bilateral finger tapping task MBME ASL/BOLD scan, which utilized an unbalanced pCASL labeling scheme with labeling time=1.5 s and PLD=1.5 s. A partial k-space acquisition was employed with 20 overscan lines. To keep the later TEs within reasonable ranges and reduce total readout time, in-plane acceleration was employed with R=2. Additional parameters for the MBME ASL/BOLD run were as follows: number of echoes=4, TE=9.1, 25, 39.6, 54.3 ms, TR=3.5 s, MB-factor=4, number of excitations=11 (total slices=11×4=44), FOV=240 mm, resolution=3×3×3 mm, FA=90°, RF pulse width=6400 ms. Scans lasted 356s, which included 64s of calibration reps at the beginning of the scan. In total 73 repetitions were acquired.
+
+### Comments added by Openfmri Curators ###
+===========================================
+
+General Comments
+----------------
+T2 data wasn’t used for any of the analysis in the paper though they were acquired as per the paper.
+
+Defacing
+--------
+Pydeface was used on all anatomical images to ensure de-identification of subjects. The code
+can be found at https://github.com/poldracklab/pydeface
+
+Quality Control
+---------------
+MRIQC was run on the dataset. Results are located in derivatives/mriqc. Learn more about it here: https://mriqc.readthedocs.io/en/stable/
+
+Where to discuss the dataset
+----------------------------
+1) www.openfmri.org/dataset/ds******/ See the comments section at the bottom of the dataset
+page.
+2) www.neurostars.org Please tag any discussion topics with the tags openfmri and dsXXXXXX.
+3) Send an email to submissions@openfmri.org. Please include the accession number in
+your email.
+
+Known Issues
+------------
+
